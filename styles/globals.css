@@ -26,3 +26,33 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Menu pour les petits écrans */
+.menu-mobile {
+  display: none;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+.menu-desktop {
+  display: flex;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+}

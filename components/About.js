@@ -1,32 +1,50 @@
-const About = () => {
-    return (
-      <section style={{ padding: '50px 20px', backgroundColor: '#1A202C', color: '#FFFFFF' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ flex: 1, marginRight: '20px', backgroundColor: '#1A202C', padding: '20px', borderRadius: '10px', textAlign: 'center' }}>
-            <h2 style={{ color: '#ECC94B', fontSize: '1.5rem', fontWeight: 'bold' }}>Deltrax <span style={{ color: '#FF9F1C' }}>Academy</span></h2>
-            <p style={{ margin: '20px 0' }}>Our training academy offers a meticulously crafted curriculum designed to equip you with the knowledge and skills needed to navigate the complexities of the financial markets.</p>
-            <ul style={{ textAlign: 'left', padding: '0 20px' }}>
-              <li>📘 Robust Curriculum: Fundamental & technical analysis, risk management, advanced strategies.</li>
-              <li>🎓 Seasoned Instructors: Learn from experienced professionals in the financial industry.</li>
-              <li>🖥️ Interactive Experience: Live webinars, quizzes, and practical exercises for hands-on learning.</li>
-            </ul>
-            <button style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#ECC94B', color: '#1A202C', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Know more</button>
-          </div>
-          <div style={{border:"solid", color:"rgba(209, 213, 219, 1)", width:"1px"}}></div>
-          <div style={{ flex: 1, marginLeft: '20px', backgroundColor: '#1A202C', padding: '20px', borderRadius: '10px', textAlign: 'center' }}>
-            <h2 style={{ color: '#ECC94B', fontSize: '1.5rem', fontWeight: 'bold' }}>Deltrax <span style={{ color: '#FF9F1C' }}>Trading</span></h2>
-            <p style={{ margin: '20px 0' }}>Our training academy offers a meticulously crafted curriculum designed to equip you with the knowledge and skills needed to navigate the complexities of the financial markets.</p>
-            <ul style={{ textAlign: 'left', padding: '0 20px' }}>
-              <li>📘 Robust Curriculum: Fundamental & technical analysis, risk management, advanced strategies.</li>
-              <li>🎓 Seasoned Instructors: Learn from experienced professionals in the financial industry.</li>
-              <li>🖥️ Interactive Experience: Live webinars, quizzes, and practical exercises for hands-on learning.</li>
-            </ul>
-            <button style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#ECC94B', color: '#1A202C', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Know more</button>
-          </div>
-        </div>
-      </section>
-    );
-  };
-  
-  export default About;
-  
+import React from 'react';
+
+const DeltraxComponent = () => {
+  return (
+    <div className="flex justify-between bg-gray-900 text-white p-10">
+      
+      <div className="w-1/2 pr-5 flex flex-col items-center text-center">
+        <h2 className="text-3xl font-bold">
+          Deltrax <span className="text-orange-500">Academy</span>
+        </h2>
+        <p className="mt-4 text-lg">
+          Our training academy offers a meticulously crafted curriculum designed
+          to equip you with the knowledge and skills needed to navigate the complexities of the financial markets.
+        </p>
+        <ul className="mt-6 space-y-4">
+          <li>✅ Robust Curriculum: Fundamental & technical analysis, risk management, advanced strategies.</li>
+          <li>✅ Seasoned Instructors: Learn from experienced professionals in the financial industry.</li>
+          <li>✅ Interactive Experience: Live webinars, quizzes, and practical exercises for hands-on learning.</li>
+        </ul>
+        <button className="mt-6 bg-yellow-400 text-black font-semibold py-2 px-4 rounded hover:bg-yellow-500">
+          Know more
+        </button>
+        <p className="mt-4 font-semibold">Join us</p>
+      </div>
+
+      <div className="w-1 bg-gray-700 mx-5"></div>
+
+      <div className="w-1/2 pl-5 flex flex-col items-center text-center">
+        <h2 className="text-3xl font-bold">
+          Deltrax <span className="text-orange-500">Trading</span>
+        </h2>
+        <p className="mt-4 text-lg">
+          Our training academy offers a meticulously crafted curriculum designed
+          to equip you with the knowledge and skills needed to navigate the complexities of the financial markets.
+        </p>
+        <ul className="mt-6 space-y-4">
+          <li>✅ Robust Curriculum: Fundamental & technical analysis, risk management, advanced strategies.</li>
+          <li>✅ Seasoned Instructors: Learn from experienced professionals in the financial industry.</li>
+          <li>✅ Interactive Experience: Live webinars, quizzes, and practical exercises for hands-on learning.</li>
+        </ul>
+        <button className="mt-6 bg-yellow-400 text-black font-semibold py-2 px-4 rounded hover:bg-yellow-500">
+          Know more
+        </button>
+        <p className="mt-4 font-semibold">Join us</p>
+      </div>
+    </div>
+  );
+};
+
+export default DeltraxComponent;

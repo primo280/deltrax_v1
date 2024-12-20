@@ -1,30 +1,33 @@
 const Hero = () => {
   return (
-    <section style={{ padding: '7px 20px', backgroundColor: '#1A202C', color: '#FFFFFF' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ flex: 1, paddingRight: '20px' }}>
-          <h1 style={{ fontSize: '2.1rem', fontWeight: 'bold', marginBottom: '20px' }}>
-            Elevate Your <br/> <span style={{ color: '#FFCB01' }}>Crypto </span><span style={{ color: '#FF7759' }}> Skills</span>
+    <section className="px-6 py-4 bg-gray-900 text-white">
+      <div className="flex items-center justify-between max-w-screen-xl mx-auto">
+        <div className="flex-1 pr-8">
+          <h1 className="text-3xl font-bold mb-5">
+            Elevate Your <br />
+            <span className="text-yellow-400">Crypto </span>
+            <span className="text-orange-400"> Skills</span>
           </h1>
-          <p style={{ fontSize: '0,7rem', marginBottom: '30px' }}>
+          <p className="text-sm mb-8">
             From promoting digital education and economic empowerment to creating cutting-edge technological solutions
           </p>
-          <button style={{ padding: '10px 20px', backgroundColor: '#ECC94B', color: '#1A202C', border: 'none', borderRadius: '20px', cursor: 'pointer', fontSize: '1rem' }}>Join Academy</button>
+          <button className="px-6 py-2 bg-yellow-400 text-gray-900 rounded-full cursor-pointer text-lg">
+            Join Academy
+          </button>
         </div>
-        <div style={{ flex: 1, textAlign: 'center' }}>
-          <img src="/crypto-coins.png" alt="Crypto Coins" style={{ width: '300px', height:"400px", borderRadius: '50%' }} />
+        <div className="flex-1 text-center">
+          <img src="/crypto-coins.png" alt="Crypto Coins" className="w-72 h-96 rounded-full mx-auto" />
         </div>
       </div>
-      <div style={{ marginTop: '50px', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px' }}>
-          Crypto Experience with <span style={{ color: '#ECC94B' }}>Our Dual Platform!</span>
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-bold mb-5">
+          Crypto Experience with <span className="text-yellow-400">Our Dual Platform!</span>
         </h2>
-        <p style={{ fontSize: '1rem' }}>
+        <p className="text-lg">
           Accelerate Your Learning Curve, Amplify Your Profits: Seamlessly Integrate Trading and Training for Optimal Results
         </p>
       </div>
     </section>
-
   );
 };
 

@@ -3,65 +3,118 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: '#1F2A37', color: '#ffffff', padding: '2rem 1rem', fontSize: '14px', textAlign: 'center', justifyContent:'center' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Entreprise Section */}
-        <div style={{ margin: '1rem' }}>
-          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem' }}>ENTREPRISE</h3>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link legacyBehavior href="/blog"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Blog</a></Link></li>
-            <li><Link legacyBehavior href="/faqs"><a style={{ color: '#ffffff', textDecoration: 'none' }}>FAQs</a></Link></li>
-            <li><Link legacyBehavior href="/about"><a style={{ color: '#ffffff', textDecoration: 'none' }}>About</a></Link></li>
-            <li><Link legacyBehavior href="/contact"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Contact</a></Link></li>
-          </ul>
-        </div>
-
-        {/* Services Section */}
-        <div style={{ margin: '1rem' }}>
-          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem' }}>SERVICES</h3>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link legacyBehavior href="/exchanges"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Exchanges</a></Link></li>
-            <li><Link legacyBehavior href="/academia"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Academia</a></Link></li>
-          </ul>
-        </div>
-
-        {/* Legal Section */}
-        <div style={{ margin: '1rem' }}>
-          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem' }}>LEGAL</h3>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link legacyBehavior href="/privacy-policy"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Privacy Policy</a></Link></li>
-            <li><Link legacyBehavior href="/terms"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Terms & Conditions</a></Link></li>
-          </ul>
-        </div>
-
-        {/* Duplicate Entreprise Section */}
-        <div style={{ margin: '1rem' }}>
-          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem' }}>ENTREPRISE</h3>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link legacyBehavior href="/privacy-policy"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Privacy Policy</a></Link></li>
-            <li><Link legacyBehavior href="/terms"><a style={{ color: '#ffffff', textDecoration: 'none' }}>Terms & Conditions</a></Link></li>
-          </ul>
-        </div>
-      </div>
-
-    
-      <div style={{ margin: ' 0.5rem', paddingLeft:"47%" }}>
-        <Image src="/Tete.png" alt="DELTRAX Logo" width={50} height={50}  />
+    <footer className="bg-gray-800 text-white py-8 text-center">
+      <div className="container mx-auto flex flex-wrap justify-between items-start gap-8 max-w-5xl px-4">
         
+        <div>
+          <h3 className="text-lg font-bold mb-4">ENTREPRISE</h3>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/blog" legacyBehavior>
+                <a className="hover:underline">Blog</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/faqs" legacyBehavior>
+                <a className="hover:underline">FAQs</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" legacyBehavior>
+                <a className="hover:underline">About</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" legacyBehavior>
+                <a className="hover:underline">Contact</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+       
+        <div>
+          <h3 className="text-lg font-bold mb-4">SERVICES</h3>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/exchanges" legacyBehavior>
+                <a className="hover:underline">Exchanges</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/academia" legacyBehavior>
+                <a className="hover:underline">Academia</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div>
+          <h3 className="text-lg font-bold mb-4">LEGAL</h3>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/privacy-policy" legacyBehavior>
+                <a className="hover:underline">Privacy Policy</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" legacyBehavior>
+                <a className="hover:underline">Terms & Conditions</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+      
+        <div>
+          <h3 className="text-lg font-bold mb-4">ENTREPRISE</h3>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/privacy-policy" legacyBehavior>
+                <a className="hover:underline">Privacy Policy</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" legacyBehavior>
+                <a className="hover:underline">Terms & Conditions</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <p style={{ fontSize: '18px', fontWeight: 'bold'}}>DELTRAX</p>
-      <p>2024 - Deltrax - Tous droits réservés</p>
-
     
-      <div style={{ marginTop: '1rem' }}>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ margin: '0 1rem', color: '#ffffff', fontSize: '20px', textDecoration: 'none' }}>
+      <div className="mt-6 flex justify-center">
+        <Image src="/Tete.png" alt="DELTRAX Logo" width={50} height={50} />
+      </div>
+      <p className="text-lg font-bold mt-2">DELTRAX</p>
+      <p className="text-sm">2024 - Deltrax - Tous droits réservés</p>
+
+     
+      <div className="mt-6 flex justify-center space-x-4">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl hover:text-gray-400"
+        >
           <i className="fab fa-facebook"></i>
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ margin: '0 1rem', color: '#ffffff', fontSize: '20px', textDecoration: 'none' }}>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl hover:text-gray-400"
+        >
           <i className="fab fa-twitter"></i>
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ margin: '0 1rem', color: '#ffffff', fontSize: '20px', textDecoration: 'none' }}>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl hover:text-gray-400"
+        >
           <i className="fab fa-instagram"></i>
         </a>
       </div>

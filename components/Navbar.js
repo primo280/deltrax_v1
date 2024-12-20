@@ -1,22 +1,110 @@
+import React, { useState } from "react";
+
 const Navbar = () => {
-    return (
-        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px', backgroundColor: '#1F2A37', color: '#FFFFFF',  }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/Tete.png" alt="Logo" style={{ width: '40px', height: '40px', marginRight: '10px' }} />
-          <span style={{ fontSize: '20px', fontWeight: 'bold', color: '#ECC94B' }}>DELTRAX</span>
-        </div>
-        <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0 }}>
-          <li style={{ margin: '0 15px' }}><a href="/about" style={{ color: '#FFFFFF', textDecoration: 'none' }}>About</a></li>
-          <li style={{ margin: '0 15px' }}><a href="/faqs" style={{ color: '#FFFFFF', textDecoration: 'none' }}>FAQs</a></li>
-          <li style={{ margin: '0 15px' }}><a href="/blog" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Blog</a></li>
-          <li style={{ margin: '0 15px' }}><a href="/contact" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Contact</a></li>
-        </ul>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <button style={{ marginRight: '10px', padding: '5px 15px', backgroundColor: '#ECC94B', color: '#1A202C', border: 'none', borderRadius: '20px', cursor: 'pointer' }}><a href="/Signup" style={{ color: '#1A202C', textDecoration: 'none' }}>Get in start</a></button>
-          <button style={{ padding: '5px 15px', backgroundColor: 'transparent', color: '#FFFFFF', border: '1px solid #FFFFFF', borderRadius: '20px', cursor: 'pointer' }}><a href="/Signin" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Login</a></button>
-        </div>
-      </nav>
-    );
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
+
+  return (
+    <nav className="flex items-center justify-between px-6 py-4 bg-gray-800 text-white">
   
-  export default Navbar;
+      <div className="flex items-center">
+        <img src="/Tete.png" alt="Logo" className="w-10 h-10 mr-3" />
+        <span className="text-lg font-bold text-yellow-400">DELTRAX</span>
+      </div>
+
+     
+      <button
+        onClick={toggleMenu}
+        className="lg:hidden text-xl focus:outline-none "
+        aria-label="Toggle Menu"
+      >
+        ☰
+      </button>
+
+   
+      <ul className="hidden lg:flex space-x-8">
+        <li>
+          <a href="/about" className="hover:text-yellow-400">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/faqs" className="hover:text-yellow-400">
+            FAQs
+          </a>
+        </li>
+        <li>
+          <a href="/blog" className="hover:text-yellow-400">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/contact" className="hover:text-yellow-400">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      
+      <div className="hidden lg:flex space-x-4">
+        <a
+          href="/Signup"
+          className="px-4 py-2 bg-yellow-400 text-gray-800 rounded-full hover:bg-yellow-500"
+        >
+          Get Started
+        </a>
+        <a
+          href="/Signin"
+          className="px-4 py-2 border border-white rounded-full hover:bg-white hover:text-gray-800"
+        >
+          Login
+        </a>
+      </div>
+
+    
+      {isMenuOpen && (
+        <ul className="lg:hidden absolute top-16 left-0 right-0 bg-gray-800 text-center space-y-4 py-4 shadow-lg z-50">
+          <li>
+            <a href="/about" className="hover:text-yellow-400">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="/faqs" className="hover:text-yellow-400">
+              FAQs
+            </a>
+          </li>
+          <li>
+            <a href="/blog" className="hover:text-yellow-400">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className="hover:text-yellow-400">
+              Contact
+            </a>
+          </li>
+          <div className="space-y-4">
+            <a
+              href="/Signup"
+              className="block px-4 py-2 bg-yellow-400 text-gray-800 rounded-full hover:bg-yellow-500"
+            >
+              Get Started
+            </a>
+            <a
+              href="/Signin"
+              className="block px-4 py-2 border border-white rounded-full hover:bg-white hover:text-gray-800"
+            >
+              Login
+            </a>
+          </div>
+        </ul>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
